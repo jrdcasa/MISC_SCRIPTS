@@ -1,0 +1,177 @@
+@SET SYSTEM MFI_Al00_111
+@SET CUTOFF 400
+@SET REL_CUTOFF 60
+@SET XYZFILE MFI_Al00_111_cp2k.xyz
+@SET PRESS 0.0
+
+&GLOBAL
+    PROJECT ${SYSTEM}
+#    RUN_TYPE GEO_OPT
+    RUN_TYPE CELL_OPT
+    PRINT_LEVEL MEDIUM
+    FLUSH_SHOULD_FLUSH F
+    SEED 172015
+    SAVE_MEM
+&END GLOBAL
+
+#&EXT_RESTART
+#  RESTART_FILE_NAME ./MFI_Al00_111-1.restart
+#  RESTART_DEFAULT F
+#&END EXT_RESTART
+
+&FORCE_EVAL
+    METHOD Quickstep
+    STRESS_TENSOR ANALYTICAL
+
+    &DFT
+        BASIS_SET_FILE_NAME BASIS_MOLOPT
+        POTENTIAL_FILE_NAME GTH_POTENTIALS
+        CHARGE 0
+
+        &MGRID
+            CUTOFF ${CUTOFF}
+            NGRIDS 5
+            REL_CUTOFF ${REL_CUTOFF}
+        &END MGRID
+
+        &QS
+            EPS_DEFAULT 1.0E-10
+            METHOD GPW
+            EXTRAPOLATION ASPC
+            EXTRAPOLATION_ORDER 3
+        &END QS
+
+        &SCF
+            EPS_SCF 1.0E-6
+            SCF_GUESS RESTART
+            MAX_SCF 200
+            &OUTER_SCF
+                MAX_SCF 50
+                EPS_SCF 1.0E-6
+            &END OUTER_SCF
+            &OT
+                MINIMIZER DIIS
+                PRECONDITIONER FULL_KINETIC
+                PRECOND_SOLVER INVERSE_CHOLESKY
+            &END OT
+            &PRINT
+                &RESTART 
+                    ADD_LAST NUMERIC
+                    BACKUP_COPIES 0
+                &END RESTART 
+            &END PRINT
+        &END SCF
+
+        &XC
+            &XC_FUNCTIONAL PBE
+            &END XC_FUNCTIONAL
+            &vdW_POTENTIAL
+                DISPERSION_FUNCTIONAL PAIR_POTENTIAL
+                &PAIR_POTENTIAL
+                    TYPE DFTD2
+                    REFERENCE_FUNCTIONAL PBE
+                &END PAIR_POTENTIAL
+            &END vdW_POTENTIAL
+        &END XC
+
+        &PRINT
+            &MULLIKEN OFF
+            &END MULLIKEN
+            &HIRSHFELD OFF
+            &END HIRSHFELD
+        &END PRINT
+
+    &END DFT
+
+    &SUBSYS
+        &CELL
+            ABC  20.090 19.738 13.142
+            ALPHA_BETA_GAMMA 90. 90. 90.
+        &END CELL
+
+        &COORD
+            @INCLUDE ${XYZFILE}         
+        &END COORD
+
+        &KIND H 
+            BASIS_SET DZVP-MOLOPT-SR-GTH
+            POTENTIAL GTH-PBE-q1
+        &END KIND
+
+        &KIND C 
+            BASIS_SET DZVP-MOLOPT-SR-GTH
+            POTENTIAL GTH-PBE-q4
+        &END KIND
+
+        &KIND N
+            BASIS_SET DZVP-MOLOPT-SR-GTH
+            POTENTIAL GTH-PBE-q5
+        &END KIND
+
+        &KIND Si
+            BASIS_SET DZVP-MOLOPT-SR-GTH
+            POTENTIAL GTH-PBE-q4
+        &END KIND
+
+        &KIND Cl
+            BASIS_SET DZVP-MOLOPT-SR-GTH
+            POTENTIAL GTH-PBE-q7
+        &END KIND
+
+        &KIND O
+            BASIS_SET DZVP-MOLOPT-SR-GTH
+            POTENTIAL GTH-PBE-q6
+        &END KIND
+
+        &KIND Al
+            BASIS_SET DZVP-MOLOPT-SR-GTH
+            POTENTIAL GTH-PBE-q3
+        &END KIND
+
+   &END SUBSYS
+
+&END FORCE_EVAL
+
+&MOTION
+    &CELL_OPT
+        TYPE DIRECT_CELL_OPT
+        KEEP_ANGLES
+        OPTIMIZER CG
+        MAX_ITER 200
+        EXTERNAL_PRESSURE [bar] ${PRESS}
+        MAX_DR 0.0030
+        RMS_DR 0.0015
+        MAX_FORCE 0.00030
+        RMS_FORCE 0.00015
+        &CG
+            &LINE_SEARCH
+                TYPE 2PNT
+                &2PNT
+                &END 2PNT
+            &END LINE_SEARCH
+        &END CG
+    &END CELL_OPT
+
+#    &GEO_OPT
+#        MAX_ITER 3000
+#        OPTIMIZER LBFGS    #Limited-memory variant of BFGS suitable for large systems. Not as well fine-tuned but can be more robust
+#    &END GEO_OPT
+
+    &PRINT
+        &TRAJECTORY
+           FORMAT PDB
+            &EACH
+                CELL_OPT 1
+            &END EACH
+        &END TRAJECTORY
+        &RESTART_HISTORY OFF
+        &END RESTART_HISTORY 
+
+        &RESTART 
+#            FILENAME ./javi
+#            ADD_LAST NUMERIC
+            BACKUP_COPIES 0
+        &END RESTART
+    &END PRINT
+
+&END MOTION
