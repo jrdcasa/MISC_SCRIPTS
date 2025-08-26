@@ -1,0 +1,24 @@
+<periodicity along A, B, and C vectors>
+.true.
+.true.
+.true.
+</periodicity along A, B, and C vectors>
+
+<atomic densities directory complete path>
+/lustre/home/iem/jramos/CODES/chargemol_09_26_2017/atomic_densities/
+</atomic densities directory complete path>
+
+<number of core electrons>
+14 10
+8 2
+1 0
+13 10
+</number of core electrons>
+
+<charge type>
+DDEC6
+</charge type>
+
+<compute BOs>
+.true.
+</compute BOs>
