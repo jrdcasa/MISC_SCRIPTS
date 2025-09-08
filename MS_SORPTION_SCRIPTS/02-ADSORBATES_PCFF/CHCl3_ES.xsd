@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="latin1"?>
+<!DOCTYPE XSD []>
+<XSD Version="25.1" WrittenBy="Materials Studio 25.1.0.513536">
+	<AtomisticTreeRoot ID="1" NumProperties="67" NumChildren="2">
+		<Property Name="AngleAxisType" DefinedOn="AngleBetweenPlanesBender" Type="Enumerated"/>
+		<Property Name="AngleEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="BeadDocumentID" DefinedOn="MesoMoleculeSet" Type="String"/>
+		<Property Name="BendBendEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="BendTorsionBendEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="BondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="DeformationEnergy" DefinedOn="MotionGroup" Type="Double"/>
+		<Property Name="EFGAsymmetry" DefinedOn="Atom" Type="Double"/>
+		<Property Name="EFGQuadrupolarCoupling" DefinedOn="Atom" Type="Double"/>
+		<Property Name="ElectrostaticEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="EquivalentAtomMatch" DefinedOn="Atom3d" Type="String"/>
+		<Property Name="FaceMillerIndex" DefinedOn="GrowthFace" Type="MillerIndex"/>
+		<Property Name="FacetTransparency" DefinedOn="GrowthFace" Type="Float"/>
+		<Property Name="FermiLevel" DefinedOn="ScalarFieldBase" Type="Double"/>
+		<Property Name="Force" DefinedOn="Matter" Type="CoDirection"/>
+		<Property Name="FrameFilter" DefinedOn="Trajectory" Type="String"/>
+		<Property Name="HarmonicForceConstant" DefinedOn="HarmonicRestraint" Type="Double"/>
+		<Property Name="HarmonicMinimum" DefinedOn="HarmonicRestraint" Type="Double"/>
+		<Property Name="HydrogenBondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ImportOrder" DefinedOn="Bondable" Type="UnsignedInteger"/>
+		<Property Name="InternalEnergy" DefinedOn="MotionGroup" Type="Double"/>
+		<Property Name="InversionEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="IsBackboneAtom" DefinedOn="Atom" Type="Boolean"/>
+		<Property Name="IsChiralCenter" DefinedOn="Atom" Type="Boolean"/>
+		<Property Name="IsOutOfPlane" DefinedOn="Atom" Type="Boolean"/>
+		<Property Name="IsRepeatArrowVisible" DefinedOn="ElectrodeWire" Type="Boolean"/>
+		<Property Name="KineticEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="LineExtentPadding" DefinedOn="BestFitLineMonitor" Type="Double"/>
+		<Property Name="LinkageGroupName" DefinedOn="Linkage" Type="String"/>
+		<Property Name="ListIdentifier" DefinedOn="PropertyList" Type="String"/>
+		<Property Name="NMRShielding" DefinedOn="Atom" Type="Double"/>
+		<Property Name="NonBondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="NormalMode" DefinedOn="Bondable" Type="Direction"/>
+		<Property Name="NormalModeFrequency" DefinedOn="Bondable" Type="Double"/>
+		<Property Name="NumScanSteps" DefinedOn="LinearScan" Type="UnsignedInteger"/>
+		<Property Name="OrbitalCutoffRadius" DefinedOn="Bondable" Type="Double"/>
+		<Property Name="PlaneExtentPadding" DefinedOn="BestFitPlaneMonitor" Type="Double"/>
+		<Property Name="PotentialEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="QuantizationValue" DefinedOn="ScalarFieldBase" Type="Double"/>
+		<Property Name="RelativeVelocity" DefinedOn="Matter" Type="Direction"/>
+		<Property Name="RepeatArrowScale" DefinedOn="ElectrodeWire" Type="Float"/>
+		<Property Name="RestraintEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ScanEnd" DefinedOn="LinearScan" Type="Double"/>
+		<Property Name="ScanStart" DefinedOn="LinearScan" Type="Double"/>
+		<Property Name="SeparatedStretchStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ServerDipoleMoment" DefinedOn="MatterGroupProperties" Type="Direction"/>
+		<Property Name="SimulationStep" DefinedOn="Trajectory" Type="Integer"/>
+		<Property Name="SorbateID" DefinedOn="MotionGroup" Type="Integer"/>
+		<Property Name="SpinQuantizationDirection" DefinedOn="Atom" Type="Direction"/>
+		<Property Name="Stiffness" DefinedOn="SymmetryMatterHessian" Type="Matrix6x6"/>
+		<Property Name="StretchBendStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="StretchStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="StretchTorsionStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="Temperature" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ThreeBodyNonBondEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TorsionBendBendEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TorsionEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TorsionStretchEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="TotalEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="Units" DefinedOn="ScalarFieldBase" Type="String"/>
+		<Property Name="UreyBradleyEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ValenceCrossTermEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="ValenceDiagonalEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="VanDerWaalsEnergy" DefinedOn="ClassicalEnergyHolder" Type="Double"/>
+		<Property Name="_ServerAtomNames" DefinedOn="IndexProvider" Type="String"/>
+		<Property Name="_Stress" DefinedOn="MatterSymmetrySystem" Type="Matrix"/>
+		<Property Name="_TrajectoryStress" DefinedOn="MatterSymmetrySystem" Type="Matrix"/>
+		<Molecule ID="2" NumChildren="11" Name="Sketch 7">
+			<Atom3d ID="3" HasProperties="1" NumChildren="1" DisplayStyle="Ball and Stick" XYZ="0.000348797,0.672672565,0.967751121" Connections="4" ForcefieldType="cl" Charge="0.054871" Components="Cl" ColorMode="0">
+				<Properties Force="0.0806358309798806,-0.307127650349839,-0.052176125928158"/>
+				<AnnotationProperty ID="5" DisplayStyle="Annotation" Color="255,255,255,255" Values="ForcefieldType" CustomText="" Movable="1"/>
+			</Atom3d>
+			<Atom3d ID="6" HasProperties="1" NumChildren="1" DisplayStyle="Ball and Stick" XYZ="0.463757435,-1.048115861,1.023537315" Connections="7,8,4,9" ForcefieldType="c1" Charge="-0.465663" Components="C" ColorMode="0">
+				<Properties Force="0.162457483003583,0.188545545967662,0.198032114318236"/>
+				<AnnotationProperty ID="10" DisplayStyle="Annotation" Color="255,255,255,255" Values="ForcefieldType" CustomText="" Movable="1"/>
+			</Atom3d>
+			<Atom3d ID="11" HasProperties="1" NumChildren="1" DisplayStyle="Ball and Stick" XYZ="-0.231716978,-1.854586421,2.452769823" Connections="7" ForcefieldType="cl" Charge="0.056376" Components="Cl" ColorMode="0">
+				<Properties Force="0.00711492626293064,-0.0711492626293064,0.0711492626293064"/>
+				<AnnotationProperty ID="12" DisplayStyle="Annotation" Color="255,255,255,255" Values="ForcefieldType" CustomText="" Movable="1"/>
+			</Atom3d>
+			<Bond ID="7" Connects="6,11" ColorMode="0"/>
+			<Atom3d ID="13" HasProperties="1" NumChildren="1" DisplayStyle="Ball and Stick" XYZ="0.047737457,-1.531918127,0.137115701" Connections="8" ForcefieldType="hc" Charge="0.297508" Components="H" ColorMode="0">
+				<Properties Force="0.0687776205416628,0.0498044838405145,-0.139926883170969"/>
+				<AnnotationProperty ID="14" DisplayStyle="Annotation" Color="255,255,255,255" Values="ForcefieldType" CustomText="" Movable="1"/>
+			</Atom3d>
+			<Bond ID="8" Connects="6,13" ColorMode="0"/>
+			<Bond ID="4" Connects="6,3" ColorMode="0"/>
+			<Atom3d ID="15" HasProperties="1" NumChildren="1" DisplayStyle="Ball and Stick" XYZ="2.234826537,-1.241972748,0.9692278" Connections="9" ForcefieldType="cl" Charge="0.056907" Components="Cl" ColorMode="0">
+				<Properties Force="-0.320171681831879,0.139926883170969,-0.0770783678484152"/>
+				<AnnotationProperty ID="16" DisplayStyle="Annotation" Color="255,255,255,255" Values="ForcefieldType" CustomText="" Movable="1"/>
+			</Atom3d>
+			<Bond ID="9" Connects="6,15" ColorMode="0"/>
+			<IndexProvider ID="17" NumTriggerSets="1">
+				<MonitorTriggerSet ID="18" Objects="3,6,11,13,15" EventMask="13"/>
+			</IndexProvider>
+			<AtomicHessian ID="19" NumTriggerSets="4" NumRows="5">
+				<RestrictableMonitorTriggerSet ID="20" ShouldAllowDeletions="0" ShouldDefineCommonRoot="0" IsIndexed="1"/>
+				<RestrictableMonitorTriggerSet ID="21" Objects="3,6,11,13,15" EventMask="13" IsIndexed="1" MustBeInvariant="0" Properties="XYZ,XYZ,XYZ,XYZ,XYZ"/>
+				<RestrictableMonitorTriggerSet ID="22" ShouldDefineCommonRoot="0" IsIndexed="1"/>
+				<MonitorTriggerSet ID="23" EventMask="13" IsIndexed="1"/>
+				<HessianRow NumCells="1">
+					<HessianCell Cell="127.7557090091,-243.3986890958,0.4645519492646,-243.3986890958,932.7338625702,-29.78808014128,0.4645519492646,-29.78808014128,65.69431903249"/>
+				</HessianRow>
+				<HessianRow NumCells="2">
+					<HessianCell Cell="-193.7316373091,430.6362967832,-26.49922898715,210.827389686,-819.5494786076,29.34783423085,50.46513365928,-161.4109663814,-81.11908916229"/>
+					<HessianCell Cell="1399.040101444,-421.2877543365,341.3962807672,-421.2877543365,1304.637874719,375.957786148,341.3962807672,375.957786148,1189.409280941"/>
+				</HessianRow>
+				<HessianRow NumCells="3">
+					<HessianCell Cell="28.40711849779,-89.70510630607,6.539258046293,8.436152031081,-111.5481386215,50.43719630506,-45.02037010451,178.7365454157,-12.67649796479"/>
+					<HessianCell Cell="-53.18535763364,17.18397280296,97.31669944704,27.87560164771,-56.85366744166,109.1529059867,-45.1287819718,-34.22594012479,-310.3871543529"/>
+					<HessianCell Cell="128.0884006221,83.39954196724,-155.1165825382,83.39954196724,153.9849012383,-177.8462114051,-155.1165825382,-177.8462114051,392.3086655559"/>
+				</HessianRow>
+				<HessianRow NumCells="4">
+					<HessianCell Cell="15.94032690696,-2.738544234173,15.35478580634,-16.21301894968,-13.89051557723,-44.4224617804,1.162733314784,8.433211822987,14.95026991838"/>
+					<HessianCell Cell="-272.5016344386,-135.9570003675,-302.936000803,-135.4813898119,-315.686542193,-349.9830707035,-301.2917654035,-348.5627988221,-720.1458700467"/>
+					<HessianCell Cell="-0.9983867516038,-0.6010361638961,45.66255264629,-0.7159010734629,-0.2373619493322,51.68980747655,3.497436841747,3.151159678011,-54.43281408947"/>
+					<HessianCell Cell="268.9192976084,159.1337450165,288.0062474559,159.1337450165,317.2140593758,334.9490949505,288.0062474559,334.9490949505,744.1426030609"/>
+				</HessianRow>
+				<HessianRow NumCells="5">
+					<HessianCell Cell="21.62848289531,-94.79395714721,4.14063318525,40.34816632834,12.25427023618,-5.574488614231,-7.072048818823,4.029289284012,13.15099817621"/>
+					<HessianCell Cell="-879.6214720623,329.2333922149,-186.2421130706,98.25724571747,-112.5481864765,26.28334495021,31.52349559521,-22.51688143196,-77.75716737937"/>
+					<HessianCell Cell="-102.3117747347,-119.1102594821,199.6031819682,-10.16250739066,14.65426677419,-18.35420136235,47.76318820313,15.10494943534,-14.81219914872"/>
+					<HessianCell Cell="-11.35960332512,-6.723435181407,8.625347791062,-19.83716425095,12.60036034374,2.029332370571,-46.08758510554,7.76663005682,15.48581115691"/>
+					<HessianCell Cell="971.6643672268,-108.6057404042,-26.12704987398,-108.6057404042,73.03928912239,-4.383987344203,-26.12704987398,-4.383987344203,63.93255719497"/>
+				</HessianRow>
+			</AtomicHessian>
+		</Molecule>
+		<AtomisticClassicalEnergy ID="24" HasProperties="1" Name="DMol3 Energy">
+			<Properties TotalEnergy="-890293.719009926"/>
+		</AtomisticClassicalEnergy>
+	</AtomisticTreeRoot>
+</XSD>
